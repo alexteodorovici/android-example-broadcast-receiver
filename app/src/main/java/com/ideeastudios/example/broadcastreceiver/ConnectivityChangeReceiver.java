@@ -11,8 +11,8 @@ import android.widget.Toast;
 public class ConnectivityChangeReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
+        //when the system dispatches the event we registered for listening this function is called 
         Log.d("BroadcastReceiver", "" + intent.getAction());
-
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = null;
         if (cm != null) {
